@@ -1,16 +1,18 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use Astrotomic\Stancy\Contracts\PageFactory;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return app(PageFactory::class)->makeFromSheetName('static', 'home');
 });
+
+Route::get('/blog', function () {
+    return app(PageFactory::class)->makeFromSheetName('static', 'blog');
+});
+
+Route::get('/blog/{post}', function (string $post) {
+    return app(PageFactory::class)->makeFromSheetName('blog', $post);
+})->name('blog.post');
+
+Route::feeds();
