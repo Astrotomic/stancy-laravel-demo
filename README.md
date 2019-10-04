@@ -1,1 +1,1 @@
-# stancy-laravel-demo
+# Stancy Laravel demo
