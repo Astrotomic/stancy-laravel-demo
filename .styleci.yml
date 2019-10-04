@@ -1,10 +1,12 @@
-php:
-  preset: laravel
-  enabled:
-    - alpha_ordered_imports
-  disabled:
-    - length_ordered_imports
-  finder:
-    not-name:
-      - index.php
-      - server.php
+preset: laravel
+
+enabled:
+  - alpha_ordered_imports
+
+disabled:
+  - length_ordered_imports
+
+finder:
+  not-name:
+    - index.php
+    - server.php
