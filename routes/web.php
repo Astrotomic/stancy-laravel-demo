@@ -21,13 +21,7 @@ Route::get('/dogs', function () {
 });
 
 Route::get('/sitemap.xml', function () {
-    $sitemap = SitemapFactory::makeFromSheetCollectionName('static');
-
-    foreach(SitemapFactory::makeFromSheetCollectionName('blog')->getTags() as $tag) {
-        $sitemap->add($tag);
-    }
-
-    return $sitemap;
+    return SitemapFactory::makeFromSheetList(['static', 'blog']);
 });
 
 Route::feeds();
