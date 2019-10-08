@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost/feed/blog.atom</id>
+  <link href="http://localhost/feed/blog.atom"/>
+  <title><![CDATA[Stancy Blog Feed]]></title>
+  <description>This is the Stancy Laravel demo blog feed.</description>
+  <language>en-US</language>
+  <updated>Fri, 04 Oct 2019 17:31:00 +0000</updated>
+  <entry>
+    <title><![CDATA[my first post]]></title>
+    <link rel="alternate" href="http://localhost/blog/first-post"/>
+    <id>http://localhost/first-post</id>
+    <author>
+      <name><![CDATA[Gummibeer, dev.gummibeer@gmail.com]]></name>
+    </author>
+    <summary type="html"><![CDATA[Add you viewing ten equally believe put. Separate families my on drawings do oh offended strictly elegance. Perceive jointure be mistress by jennings properly. An admiration at he discovered difficulty continuing. We in building removing possible suitable friendly on. Nay middleton him admitting consulted and behaviour son household. Recurred advanced]]></summary>
+    <category type="html"><![CDATA[]]></category>
+    <updated>Wed, 04 Sep 2019 17:31:00 +0000</updated>
+  </entry>
+  <entry>
+    <title><![CDATA[my second post]]></title>
+    <link rel="alternate" href="http://localhost/blog/second-post"/>
+    <id>http://localhost/second-post</id>
+    <author>
+      <name><![CDATA[Gummibeer, dev.gummibeer@gmail.com]]></name>
+    </author>
+    <summary type="html"><![CDATA[Far quitting dwelling graceful the likewise received building. An fact so to that show am shed sold cold. Unaffected remarkably get yet introduced excellence terminated led. Result either design saw she esteem and. On ashamed no inhabit ferrars it ye besides resolve. Own judgment directly few trifling. Elderly as pursuit]]></summary>
+    <category type="html"><![CDATA[]]></category>
+    <updated>Fri, 04 Oct 2019 17:31:00 +0000</updated>
+  </entry>
+</feed>

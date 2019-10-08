@@ -15,11 +15,13 @@
         "laravel/tinker": "^1.0"
     },
     "require-dev": {
+        "ext-dom": "*",
         "facade/ignition": "^1.4",
         "fzaninotto/faker": "^1.4",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
-        "phpunit/phpunit": "^8.0"
+        "phpunit/phpunit": "^8.0",
+        "spatie/phpunit-snapshot-assertions": "^2.1"
     },
     "config": {
         "optimize-autoloader": true,
