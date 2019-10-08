@@ -8,15 +8,15 @@ use Astrotomic\Stancy\Traits\PageHasSlug;
 use Spatie\Sitemap\Tags\Tag;
 use Spatie\Sitemap\Tags\Url;
 
-class Blog extends PageData
+class Dogs extends PageData
 {
     use PageHasSlug, PageHasContent;
 
-    /** @var \App\Pages\Post[] */
-    public $posts;
+    /** @var \App\Pages\Breed[] */
+    public $dogs;
 
     public function toSitemapItem(): Tag
     {
-        return Url::create(url('/blog'));
+        return Url::create(url('/dogs'));
     }
 }

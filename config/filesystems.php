@@ -65,6 +65,11 @@ return [
             'root' => resource_path('content/blog'),
         ],
 
+        'dogs' => [
+            'driver' => 'local',
+            'root' => resource_path('content/dogs'),
+        ],
+
     ],
 
 ];

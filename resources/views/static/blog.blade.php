@@ -10,7 +10,7 @@
                         <h3 class="card-title">{{ $post->title }}</h3>
                         <div><small>{{ $post->date->format('Y-m-d H:i') }}</small></div>
                         <div class="card-text mb-3">{!! Illuminate\Support\Str::words(strip_tags($post->contents), 20) !!}</div>
-                        <a href="{{ route('blog.post', ['post' => $post->slug]) }}" class="btn btn-primary">open post</a>
+                        <a href="{{ $post->getUrl() }}" class="btn btn-primary">open post</a>
                     </div>
                 </div>
             </div>
