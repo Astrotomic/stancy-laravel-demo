@@ -2,19 +2,19 @@
 
 namespace App\Pages;
 
+use Astrotomic\Stancy\Contracts\Routable;
 use Astrotomic\Stancy\Models\PageData;
 use Astrotomic\Stancy\Traits\PageHasContent;
 use Astrotomic\Stancy\Traits\PageHasDate;
 use Astrotomic\Stancy\Traits\PageHasSlug;
+use Astrotomic\Stancy\Traits\PageHasUrl;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Spatie\Feed\FeedItem;
-use Spatie\Sitemap\Tags\Tag;
-use Spatie\Sitemap\Tags\Url;
 
-class Post extends PageData
+class Post extends PageData implements Routable
 {
-    use PageHasSlug, PageHasContent, PageHasDate;
+    use PageHasSlug, PageHasContent, PageHasDate, PageHasUrl;
 
     /** @var string */
     public $title;
@@ -40,11 +40,6 @@ class Post extends PageData
             ->author('Gummibeer, dev.gummibeer@gmail.com')
             ->updated($this->date)
             ->summary(Str::words(strip_tags($this->contents), 50, ''));
-    }
-
-    public function toSitemapItem(): Tag
-    {
-        return Url::create($this->getUrl());
     }
 
     public function getUrl(): string

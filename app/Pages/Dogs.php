@@ -2,21 +2,21 @@
 
 namespace App\Pages;
 
+use Astrotomic\Stancy\Contracts\Routable;
 use Astrotomic\Stancy\Models\PageData;
 use Astrotomic\Stancy\Traits\PageHasContent;
 use Astrotomic\Stancy\Traits\PageHasSlug;
-use Spatie\Sitemap\Tags\Tag;
-use Spatie\Sitemap\Tags\Url;
+use Astrotomic\Stancy\Traits\PageHasUrl;
 
-class Dogs extends PageData
+class Dogs extends PageData implements Routable
 {
-    use PageHasSlug, PageHasContent;
+    use PageHasSlug, PageHasContent, PageHasUrl;
 
     /** @var \App\Pages\Breed[] */
     public $dogs;
 
-    public function toSitemapItem(): Tag
+    public function getUrl(): string
     {
-        return Url::create(url('/dogs'));
+        return url('/dogs');
     }
 }
