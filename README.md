@@ -1,5 +1,3 @@
-
-
 # Stancy Laravel demo
 
 [![StyleCI](https://styleci.io/repos/212771722/shield)](https://styleci.io/repos/212771722)
